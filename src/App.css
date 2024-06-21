@@ -1,38 +1,52 @@
+/* Genel stil ayarları */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f35b03b7 !important;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  min-height: 100vh; /* Sayfa boyunca yayılan, minimum 100% yükseklik */
 }
 
-.App-link {
-  color: #61dafb;
+.editor-container,
+.preview-container {
+  width: 80%; /* Genişlik oranını artırdık */
+  max-width: 800px; /* Maksimum genişlik belirledik */
+  padding: 20px;
+  background-color: #fff; /* Beyaz arka plan */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
+  border-radius: 8px; /* Yuvarlatılmış köşeler */
+  margin: 20px; /* Kenar boşluğu */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+textarea {
+  width: 100%;
+  min-height: 200px; /* Minimum yükseklik belirledik */
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+#preview {
+  padding: 20px;
+  background-color: #f9f9f9; /* Gri arka plan */
+  border: 1px solid #ccc;
+  min-height: 300px;
+  overflow-y: auto;
+  border-radius: 4px;
+}
+
+/* Tablet ve mobil cihazlara uyumlu medya sorguları */
+@media (max-width: 768px) {
+  .editor-container,
+  .preview-container {
+    width: 90%; /* Küçük ekranlarda genişliği artırdık */
+    padding: 15px;
   }
 }
